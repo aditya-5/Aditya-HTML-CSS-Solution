@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Background Images with Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://db.onlinewebfonts.com/c/393a9d7be8173b0caf20435ec259d340?family=Magnum+Sans+W01+Bold+V2" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/ee48f16a5336e0cf4f5007c00d34a825?family=Magnum+Sans+W01+Regular+V1" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/21dbb8851c.js" crossorigin="anonymous"></script>
+    <style>
+         body {
+            padding: 0 ;
+            margin: 0; 
+        }
+
+
+
+        .navbar {
+            font-family: 'Georgia Pro W01 Regular', serif; 
+            width: 100%;
+            padding: 1%; 
+            display: block;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: white; 
+            
+        }
+
+        .navbar ul {
+            list-style-type: none; 
+            text-align: center; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar .icon-container {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            margin-right:20px;
+
+        }
+
+        .navbar .icon-container a {
+            color: rgb(19, 23, 42);
+            font-size: 20px; 
+            padding: 0 10px; 
+            text-decoration: none;
+        }
+
+        .navbar .icon-container a:hover {
+            color: rgb(100, 100, 100); 
+        }
+
+        .navbar ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+
+        #linksnavbar{
+            display: inline-block;
+            width: 70%;
+        }
+
+        .navbar ul li a {
+            color: rgb(93, 89, 86); 
+            text-decoration: none;
+            font-size: 16px; 
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(100, 100, 100); 
+        }
+
+        .background {
+            height: 100vh; 
+            background-size: cover; 
+        }
+
+        .bg1 {
+            background-image: url('img1.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+        }
+
+        .bg2 {
+            background: linear-gradient(
+                to right, 
+                rgb(255, 118, 183) 0%,  
+                rgb(255, 159, 145) 50%, 
+                rgb(255, 214, 97) 100% 
+            );
+            background-size: cover; 
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+            position: relative;
+
+
+        }
+
+
+        .overlay-bg1 {
+            position: absolute;
+            top: 50%;
+            left: 30%; 
+            transform: translate(-70%, -20%);
+            background: rgba(192, 106, 96, 0.7); 
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+            max-width: 30%;
+        }
+
+        .overlay-bg1 h1 {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(19, 23, 42);
+            color: white;
+            font-family: 'Magnum Sans W01 Bold V2';
+            text-align: left;
+            font-size: 2rem
+        }
+
+        /* Paragraph in the overlay */
+        .overlay-bg1 p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+            text-align: left ;
+            font-family: 'Magnum Sans W01 Regular V1';
+
+        }
+
+        @media (max-width: 600px) {
+            .overlay-bg1 {
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                max-width: 100%;
+            }
+
+            .overlay-bg1 h1 {
+                text-align: center;
+            }
+
+            .overlay-bg1 p {
+                text-align: center ;
+
+            }
+
+            .navbar .icon-container {
+                display: block; 
+                position: relative; 
+                margin-top: 10px; 
+                right: auto; 
+            }
+
+            .navbar {
+                height: 10vh;
+                text-align: center;
+            }
+
+            #linksnavbar {
+                display: block;
+                width: 100%; 
+                text-align: center
+            }
+
+             .navbar ul li a {
+                font-size: 14px; 
+            }
+
+        }
+
+        .overlay-bg2 {
+            background: white; 
+            padding: 20px;
+            text-align: center;
+            z-index: 1; 
+            width: 20%; 
+            border-radius: 0 80px 00px 80px; 
+        }
+
+        .overlay-bg2 h2 {
+            margin: 0;
+            font-size: 24px;
+            color: black;
+            font-family: 'Magnum Sans W01 Regular V1';
+        }
+
+        .overlay-bg2 p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: black;
+            font-family: 'Magnum Sans W01 Regular V1';
+
+        }
+
+        .overlay-bg2 img {
+            height: 45vh;
+            width: 90%;
+            border-radius: 0 80px 00px 8px; 
+            object-fit: cover; 
+        }
+
+        .bg2 .heading {
+            position: absolute;
+            top: 10px; 
+            left: 50%;
+            transform: translateX(-50%);
+            color: white; 
+            font-family: 'Magnum Sans W01 Regular V1';
+            font-size: 2.5rem;
+            text-align: center; 
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .bg2 {
+                flex-direction: column; 
+                height: 250vh
+            }
+
+            .overlay-bg2 {
+                width: 60%; 
+                margin-top: 30px;
+
+            }
+
+            .overlay-bg2 img {
+                height: 40vh; 
+                width: 90%;
+                border-radius: 0 80px 00px 8px; 
+                object-fit: cover; 
+            }
+
+            .bg2 .heading {
+                font-size: 1.5rem;
+            }
+
+
+        }
+
+
+
+
+    </style>
+        
+</head>
+<body>
+    <div class="navbar">
+        <div id="linksnavbar">
+            <ul>
+                <li><a href="#link1">Home</a></li>
+                <li><a href="#link2">Order</a></li>
+                <li><a href="#link3">Food</a></li>
+                <li><a href="#link4">Restaurant</a></li>
+                <li><a href="#link5">Testimonials</a></li>
+                <li><a href="#link6">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="icon-container">
+            <a href="#whatsapp"><i class="fa fa-whatsapp"></i></a> 
+            <a href="#cart"><i class="fa fa-shopping-cart"></i></a> 
+        </div>
+    </div>
+
+    <div class="background bg1">
+        <div class="overlay-bg1">
+            <h1>LOREM IPSUM</h1>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        </div>
+    </div>
+
+    <div class="background bg2">
+        <h3 class="heading">ORDER NOW</h3> 
+            <div class="overlay-bg2">
+                <img src="img1.jpg" alt="Image 1">
+                <h2>BURGER</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text</p>
+            </div>
+
+            <div class="overlay-bg2">
+                <img src="img2.jpg" alt="Image 2">
+                <h2>PIZZA</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text</p>
+            </div>
+
+            <div class="overlay-bg2">
+                <img src="img3.jpg" alt="Image 3">
+                <h2>PASTA</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text</p>
+            </div>
+    </div>
+</body>
+</html>
